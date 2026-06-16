@@ -1,0 +1,116 @@
+# =============================================================================
+# 个人笔记网站 - MkDocs 配置
+# -----------------------------------------------------------------------------
+# 部署前请替换以下占位符：
+#   <USERNAME>  → 你的 GitHub 用户名
+#   <REPO>      → 仓库名（例如 notes / wiki）
+# =============================================================================
+
+site_name: 我的笔记
+site_url: https://cao42.github.io/notes/
+site_description: 个人笔记知识库
+repo_url: https://github.com/CaO42/notes
+repo_name: CaO42/notes
+edit_uri: edit/main/docs/
+
+# -----------------------------------------------------------------------------
+# 主题：Material（极简现代风格）
+# -----------------------------------------------------------------------------
+theme:
+  name: material
+  language: zh
+  features:
+    - navigation.tracking       # URL 随标题变化，便于分享与定位
+    - navigation.tabs           # 顶部标签页分组（桌面端）
+    - navigation.indexes        # 文件夹首页
+    - toc.integrate             # ★ 标题树(TOC)合并进左侧导航
+    - content.code.copy         # 代码块一键复制
+    - content.code.select       # 代码块行号
+    - search.suggest            # 搜索建议
+    - search.highlight          # 搜索结果高亮
+  font: false                   # 使用系统字体，加载快、无需联网
+
+  # ★ 自适应系统深浅色 + 手动切换按钮
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: 切换至深色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: 切换至浅色模式
+
+# -----------------------------------------------------------------------------
+# 插件
+# -----------------------------------------------------------------------------
+plugins:
+  - search:                    # 全文搜索
+      lang:
+        - en
+        - ja                   # 中文分词复用日语支持（lunr 暂无 zh）
+  - awesome-pages              # ★ 自动识别目录结构生成左侧导航
+
+# -----------------------------------------------------------------------------
+# Markdown 扩展
+# -----------------------------------------------------------------------------
+markdown_extensions:
+  # LaTeX 公式支持
+  - pymdownx.arithmatex:
+      generic: true
+
+  # 代码高亮 / 围栏代码
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+
+  # 标题 TOC
+  - toc:
+      permalink: true
+      toc_depth: 3
+
+  # 提示框（admonition）
+  - admonition
+  - pymdownx.details
+
+  # 其它实用扩展
+  - attr_list                   # 允许为元素附加属性（图片宽度等）
+  - md_in_html                  # 允许在 HTML 块中写 markdown
+  - def_list                    # 定义列表
+  - footnotes                   # 脚注
+  - tables                      # 表格
+  - pymdownx.tasklist:          # 任务列表
+      custom_checkbox: true
+  - pymdownx.tilde              # 删除线 ~~text~~
+  - pymdownx.mark               # 高亮 ==text==
+  - pymdownx.keys               # 按键 ++ctrl+c++
+  - pymdownx.emoji:             # emoji :smile:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+# -----------------------------------------------------------------------------
+# 额外资源
+# -----------------------------------------------------------------------------
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+extra_css:
+  - stylesheets/extra.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/CaO42/notes

@@ -1,0 +1,194 @@
+/* =============================================================================
+   极简现代风格 + 移动端优化
+   ========================================================================== */
+
+/* -----------------------------------------------------------------------------
+   1. 字体与基础排版（中文友好、系统字体、加载快）
+   -------------------------------------------------------------------------- */
+:root {
+  --md-text-font: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans SC", "Noto Sans CJK SC",
+    Roboto, Helvetica, Arial, sans-serif;
+  --md-code-font: "JetBrains Mono", "Fira Code", "Cascadia Code", Consolas,
+    "Source Code Pro", monospace;
+}
+
+/* 正文行高与段间距，提升长文可读性 */
+.md-typeset {
+  font-size: 0.82rem;
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.md-typeset p,
+.md-typeset ul,
+.md-typeset ol {
+  margin-block: 1em;
+}
+
+/* 内容区最大宽度限制，避免宽屏行过长 */
+.md-typeset .md-content__inner {
+  max-width: 820px;
+  margin-inline: auto;
+  padding: 1rem 1.5rem 3rem;
+}
+
+/* -----------------------------------------------------------------------------
+   2. 标题层级（极简：去掉装饰、统一字重）
+   -------------------------------------------------------------------------- */
+.md-typeset h1 {
+  font-weight: 600;
+  font-size: 1.9rem;
+  margin-block: 0 1.2rem;
+  color: var(--md-default-fg-color);
+}
+
+.md-typeset h2 {
+  font-weight: 600;
+  font-size: 1.4rem;
+  margin-block: 2rem 0.8rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.md-typeset h3 {
+  font-weight: 600;
+  font-size: 1.15rem;
+  margin-block: 1.5rem 0.6rem;
+}
+
+/* -----------------------------------------------------------------------------
+   3. 代码块
+   -------------------------------------------------------------------------- */
+.md-typeset pre > code {
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+
+/* -----------------------------------------------------------------------------
+   4. 链接与引用块
+   -------------------------------------------------------------------------- */
+.md-typeset a {
+  text-decoration: none;
+}
+
+.md-typeset a:hover {
+  text-decoration: underline;
+}
+
+.md-typeset blockquote {
+  border-left: 3px solid var(--md-primary-fg-color);
+  color: var(--md-default-fg-color--light);
+  padding-left: 1rem;
+  font-style: normal;
+}
+
+/* -----------------------------------------------------------------------------
+   5. 表格（移除边框、保留行分隔，更极简）
+   -------------------------------------------------------------------------- */
+.md-typeset table:not([class]) {
+  border: none;
+  box-shadow: none;
+  border-top: 2px solid var(--md-default-fg-color--lighter);
+}
+
+.md-typeset table:not([class]) th {
+  background: transparent;
+  border-bottom: 1px solid var(--md-default-fg-color--lighter);
+}
+
+.md-typeset table:not([class]) td {
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+}
+
+/* -----------------------------------------------------------------------------
+   6. 数学公式块居中、留白
+   -------------------------------------------------------------------------- */
+.md-typeset .MathJax {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-block: 0.2rem;
+}
+
+/* -----------------------------------------------------------------------------
+   7. 移动端专项优化（< 960px）
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 960px) {
+  /* 正文字号略增，移动端阅读更舒适 */
+  .md-typeset {
+    font-size: 0.95rem;
+    line-height: 1.75;
+  }
+
+  .md-typeset h1 {
+    font-size: 1.6rem;
+  }
+
+  .md-typeset h2 {
+    font-size: 1.25rem;
+  }
+
+  .md-typeset h3 {
+    font-size: 1.1rem;
+  }
+
+  /* 减少内容区内边距，最大化利用屏幕 */
+  .md-typeset .md-content__inner {
+    padding: 0.8rem 1rem 2.5rem;
+  }
+
+  /* 代码块字号略减，适配窄屏 */
+  .md-typeset pre > code {
+    font-size: 0.75rem;
+  }
+
+  /* 表格允许横向滚动而非撑破布局 */
+  .md-typeset div.md-typeset__scrollwrap,
+  .md-typeset table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* 超窄屏（< 480px）进一步优化 */
+@media screen and (max-width: 480px) {
+  .md-typeset {
+    font-size: 1rem;
+  }
+
+  .md-typeset .md-content__inner {
+    padding: 0.6rem 0.85rem 2rem;
+  }
+
+  /* 段落间距收紧 */
+  .md-typeset p,
+  .md-typeset ul,
+  .md-typeset ol {
+    margin-block: 0.8em;
+  }
+}
+
+/* -----------------------------------------------------------------------------
+   8. 移动端导航抽屉优化
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 1219px) {
+  /* 导航抽屉宽度自适应，占屏幕 85%，保留少量可视边界 */
+  .md-nav--primary {
+    width: min(85vw, 320px);
+  }
+
+  /* 抽屉打开时背景层级清晰 */
+  .md-nav__toggle ~ .md-nav {
+    transition: max-height 0.3s ease;
+  }
+}
+
+/* -----------------------------------------------------------------------------
+   9. 选中文本配色（极简点缀）
+   -------------------------------------------------------------------------- */
+::selection {
+  background: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color);
+}
