@@ -1,0 +1,4 @@
+title: 光照
+nav:
+  - 光照模型: 光照.md
+  - LookAt 观察矩阵: lookat.md
