@@ -29,7 +29,7 @@
 
 /* 桌面端阅读宽度限制，避免宽屏行过长 */
 .md-content__inner.md-typeset {
-  max-width: 760px;
+  max-width: 780px;
   margin-inline: auto;
   padding: 1rem 1.5rem 3rem;
 }
