@@ -1,0 +1,4 @@
+title: 操作系统
+nav:
+  - Lab5 内核线程: lab5
+  - Lab6 并发与锁机制: lab6
