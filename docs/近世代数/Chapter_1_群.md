@@ -604,7 +604,7 @@ $H$ 作为群 $G$ 的子群，有单位元，而 $G$ 也有单位元. 同时，$
 > $$ab = a(b^{-1})^{-1} \in H,$$
 > 从而定理 1.3.2 的条件 (1) 也成立.
 > 
-> 因此 $H$ 是 $G$ 的子群. $\hfill\Box$
+> 因此 $H$ 是 $G$ 的子群. <span style="float:right;">$\Box$</span>
 
 > **例 3** $GL_n(\mathbf{R})$ 表示所有 $n$ 阶可逆实矩阵关于矩阵的乘法构成的群. 记
 > $$SL_n(\mathbf{R}) = \{ A \in M_n(\mathbf{R}) \mid \det(A) = 1 \},$$
@@ -616,7 +616,7 @@ $H$ 作为群 $G$ 的子群，有单位元，而 $G$ 也有单位元. 同时，$
 > $$\det(AB^{-1}) = \det(A) \cdot \det(B)^{-1} = 1 \cdot 1^{-1} = 1,$$
 > 所以 $AB^{-1} \in SL_n(\mathbf{R})$.
 > 
-> 从而 $SL_n(\mathbf{R})$ 是 $GL_n(\mathbf{R})$ 的子群 (群 $SL_n(\mathbf{R})$ 称为特殊线性群). $\hfill\Box$
+> 从而 $SL_n(\mathbf{R})$ 是 $GL_n(\mathbf{R})$ 的子群 (群 $SL_n(\mathbf{R})$ 称为特殊线性群). <span style="float:right;">$\Box$</span>
 
 > **例 4** 设 $G$ 为群, 记
 > $$C(G) = \{ g \in G \mid gx = xg, \forall x \in G \},$$
@@ -634,7 +634,7 @@ $H$ 作为群 $G$ 的子群，有单位元，而 $G$ 也有单位元. 同时，$
 > $$a^{-1}axa^{-1} = a^{-1}xaa^{-1},$$
 > 化简得 $xa^{-1} = a^{-1}x$, 所以 $a^{-1} \in C(G)$. 从而定理 1.3.2 的条件 (2) 也成立.
 > 
-> 于是由定理 1.3.2 知, $C(G)$ 为 $G$ 的子群. $\hfill\Box$
+> 于是由定理 1.3.2 知, $C(G)$ 为 $G$ 的子群. <span style="float:right;">$\Box$</span>
 
 **例 5** 设 $G = \mathbf{Z}_7^*$, 令
 $$H = \{1, 2, 4\} \subseteq G.$$
@@ -648,7 +648,7 @@ $H$ 的乘法表见表 1.3.1。
 | $2$ | $2$ | $4$ | $1$ |
 | $4$ | $4$ | $1$ | $2$ |
 
-由表 1.3.1 可以看出, $H$ 关于 $\mathbf{Z}_7^*$ 的乘法封闭, 且 $H$ 包含它的每个元素的逆元素. 由定理 1.3.2 知 $H$ 是 $\mathbf{Z}_7^*$ 的子群. $\hfill \square$
+由表 1.3.1 可以看出, $H$ 关于 $\mathbf{Z}_7^*$ 的乘法封闭, 且 $H$ 包含它的每个元素的逆元素. 由定理 1.3.2 知 $H$ 是 $\mathbf{Z}_7^*$ 的子群. <span style="float:right;">$\square$</span>
 
 > **定理 1.3.4** 群 $G$ 的任意两个子群的交集还是 $G$ 的子群.
 > 
@@ -656,7 +656,7 @@ $H$ 的乘法表见表 1.3.1。
 > 
 > (1) 因 $G$ 的单位元 $e \in H_1 \cap H_2$, 所以 $H_1 \cap H_2$ 是 $G$ 的非空子集.
 > 
-> (2) 对任意 $a, b \in H_1 \cap H_2$, 有 $a, b \in H_1$, $a, b \in H_2$, 而 $H_1, H_2$ 都是 $G$ 的子群, 所以 $ab^{-1} \in H_1$, $ab^{-1} \in H_2$. 于是 $ab^{-1} \in H_1 \cap H_2$, 从而由定理 1.3.3 知 $H_1 \cap H_2$ 是 $G$ 的子群. $\hfill \square$
+> (2) 对任意 $a, b \in H_1 \cap H_2$, 有 $a, b \in H_1$, $a, b \in H_2$, 而 $H_1, H_2$ 都是 $G$ 的子群, 所以 $ab^{-1} \in H_1$, $ab^{-1} \in H_2$. 于是 $ab^{-1} \in H_1 \cap H_2$, 从而由定理 1.3.3 知 $H_1 \cap H_2$ 是 $G$ 的子群. <span style="float:right;">$\square$</span>
 
 > **注** 一般地可以证明, 群 $G$ 的任意 (有限或无限) 多个子群 $\{H_i \mid i \in I\}$ 的交集
 > $$\bigcap_{i \in I} H_i$$
@@ -836,7 +836,7 @@ $$\phi(x + y) = 2^{x+y} = 2^x \cdot 2^y = \phi(x) \cdot \phi(y),$$
 所以 $\phi$ 保持运算.
 
 这就证明了 $\phi$ 是 $\mathbf{R}$ 到 $\mathbf{R}^+$ 的同构映射, 从而
-$$\phi : \mathbf{R} \cong \mathbf{R}^+. \hfill \square$$
+$$\phi : \mathbf{R} \cong \mathbf{R}^+. \tag*{$\square$}$$
 
 易知, 对任一正实数 $a \neq 1$, 映射 $\phi(x) = a^x\ (x \in \mathbf{R})$ 也是 $\mathbf{R}$ 到 $\mathbf{R}^+$ 的同构映射. 这说明, 同构的群之间可以有不止一个同构映射.
 
@@ -895,7 +895,7 @@ $$\phi : \mathbf{R} \cong \mathbf{R}^+. \hfill \square$$
 > &= (\psi \circ \phi)(x)(\psi \circ \phi)(y),
 > \end{aligned}
 > $$
-> 所以 $\psi \circ \phi$ 是 $G$ 到 $G''$ 的同构映射, 从而 $G \cong G''$. 这就证明了 (3). $\hfill\Box$
+> 所以 $\psi \circ \phi$ 是 $G$ 到 $G''$ 的同构映射, 从而 $G \cong G''$. 这就证明了 (3). <span style="float:right;">$\Box$</span>
 
 > **例 3** 设群 $U_4 = \{1, -1, i, -i\}$ 是 4 次单位根群 (见 1.2 节例 7), $K = \{e, a, b, ab\}$ 是由元素 $a, b$ 及关系 $a^2 = b^2 = e$ 和 $ab = ba$ 所定义的群 (见习题 1-3 的 22 题). 问 $U_4$ 与 $K$ 是否同构, 为什么?
 >
@@ -961,7 +961,7 @@ $$\sigma \sigma^{-1} = \iota = \sigma^{-1} \sigma,$$
 > (3) 对任意的 $a, b \in G$, 有
 > $$\rho(ab) = \phi_{ab} = \phi_a \phi_b = \rho(a)\rho(b),$$
 > 所以 $\rho$ 是 $G$ 到 $G_l$ 的同构映射, 即
-> $$\rho : G \cong G_l. \hfill \square$$
+> $$\rho : G \cong G_l. \tag*{$\square$}$$
 
 变换群 $G_l$ 称为 $G$ 的**左正则表示**(left regular representation), 变换 $\phi_a$ 称为由元素 $a$ 所确定的**左平移**(left translation).
 如果定义 $\psi_a(x) = xa^{-1}$, 那么同样可以证明,
@@ -1193,7 +1193,7 @@ $$2^4 = 4^4 = 7^4 = 8^4 = 11^4 = 13^4 = 14^4 = 1,$$
 > $$a^k = a^{sr} = (a^r)^s \in \langle a^r \rangle.$$
 > 又显然有 $\langle a^r \rangle \subseteq H$,  所以
 > $$H = \langle a^r \rangle$$
-> 为循环群。 $\hfill \square$
+> 为循环群。 <span style="float:right;">$\square$</span>
 
 由定理 1.5.5 的证明, 还可以得到下述结论.
 
@@ -1488,7 +1488,7 @@ $$\begin{aligned}
 \alpha &= (i_k \ i_n)(i_n \ a \ \cdots \ b)\alpha_2\alpha_3 \cdots \alpha_r \\
 &= (i_k \ i_n \ a \ \cdots \ b)\alpha_2\alpha_3 \cdots \alpha_r
 \end{aligned}$$
-为不相交轮换的乘积. 从而由归纳法知结论成立. $\hfill\square$
+为不相交轮换的乘积. 从而由归纳法知结论成立. <span style="float:right;">$\square$</span>
 
 进一步可以知道, 将一个置换分解为不相交轮换的乘积, 如果不考虑因子的次序和乘积中 $1$ 轮换的个数, 则这个分解式是唯一的 (见本节习题 23). 一般地, 如果一个置换不是恒等置换, 则在它的分解式中, 常将出现的 $1$ 轮换省略不写.
 
@@ -1571,7 +1571,7 @@ $$\sigma = (1\ 6\ 7\ 4\ 2\ 5\ 3).$$
 
 **证明** 首先, 设 $\sigma = (i_1\ i_2\ \cdots\ i_r)$ 是一个 $r$ 轮换, 则
 $$\sigma = (i_1\ i_2)(i_2\ i_3)\cdots(i_{r-2}\ i_{r-1})(i_{r-1}\ i_r),$$
-所以每个轮换可以表示为对换的乘积. 由于每个置换可以表示为不相交轮换的乘积, 所以每个置换也可以表示为对换的乘积. $\hfill\square$
+所以每个轮换可以表示为对换的乘积. 由于每个置换可以表示为不相交轮换的乘积, 所以每个置换也可以表示为对换的乘积. <span style="float:right;">$\square$</span>
 
 例如,
 $$
@@ -1623,7 +1623,7 @@ N(\sigma) &= N(\sigma \cdot (1)) \\
 $$
 同理
 $$N(\sigma) = (-1)^k.$$
-因此 $(-1)^h = (-1)^k$, 所以 $h$ 与 $k$ 有相同的奇偶性. \hfill $\square$
+因此 $(-1)^h = (-1)^k$, 所以 $h$ 与 $k$ 有相同的奇偶性. <span style="float:right;">$\square$</span>
 > **定义 1.6.3** 可表成偶数个对换的乘积的置换叫**偶置换**(even permutation), 可表成奇数个对换的乘积的置换叫**奇置换**(odd permutation).
 > 
 > 由定义容易知道:
