@@ -1,0 +1,3 @@
+title: 附录
+nav:
+  - gdb 与 qemu 调试: debug_with_gdb_and_qemu

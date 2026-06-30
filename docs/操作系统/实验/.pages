@@ -1,0 +1,14 @@
+title: 实验
+nav:
+  - 总览: README.md
+  - Lab1 编译内核与构建 OS: lab1
+  - Lab2 实验入门: lab2
+  - Lab3 从实模式到保护模式: lab3
+  - Lab4 中断: lab4
+  - Lab5 内核线程: lab5
+  - Lab6 并发与锁机制: lab6
+  - Lab7 内存管理: lab7
+  - Lab8 从内核态到用户态: lab8
+  - Lab9 简单文件系统: lab9
+  - Lab10 Course Projects: lab10
+  - 附录: appendix
