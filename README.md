@@ -20,10 +20,9 @@ docs/
 ├── javascripts/mathjax.js            # MathJax 配置
 ├── stylesheets/extra.css             # 自定义样式（极简风格 + 移动端优化）
 ├── 人工智能/
-│   ├── .pages                        # 导航分组：搜索技术 / 概率推理 / 机器学习 / 深度学习
-│   ├── 00_总览与复习路线.md
-│   ├── 01 ~ 11                       # 12 篇课程笔记，按编号顺序排列
-│   └── ...
+│   ├── .pages                        # 导航排序：复习路线 > 01 ~ 10
+│   ├── 人工智能复习路线.md
+│   └── 01 ~ 10                       # 10 篇复习笔记，覆盖绪论、搜索、推理、机器学习、深度学习、强化学习
 └── 图形学/
     ├── .pages                        # 导航排序：FCG_games101 > LearnOpenGL > Unity > 探究
     ├── FCG_games101/                 # 光栅化、Blinn-Phong、PBR 等
@@ -48,7 +47,7 @@ docs/
 
 ```bash
 # 示例：在人工智能目录新增一篇笔记
-echo "# 主题标题" > docs/人工智能/12_新主题.md
+echo "# 主题标题" > docs/人工智能/11_新主题.md
 git add docs/
 git commit -m "新增：人工智能 - 新主题"
 git push
